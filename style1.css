@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+
+body {
+    background: #1c1c1c; /* Dark charcoal */
+    margin: 0;
+}
+
+.cover-outer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    z-index:2;
+    overflow: hidden;
+}
+
+.cover-outer .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    color: #f9f9f9;
+     /*color:#FFD700 */
+    /*text-shadow: 2px 2px 4px rgba(0,0,0,0.7);*/
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
+
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+
+    padding:10px 15px;
+    max-width:85%;
+    width:max-content;
+    display: inline-block;
+    line-height : 1.6em;
+    white-space: normal;
+}
+
+.cover-outer img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:5px;
+}
+
+.birthday-card {
+    position: relative;
+    width: 300px;
+    height: 395px;
+    border: 10px solid #8a8a8a; /* Steel grey border */
+    margin: 60px auto 0 auto;
+    box-shadow: inset 10px 0px 15px 0px rgba(255, 255, 255, 0.05);
+    background:
+        linear-gradient(to bottom, rgba(28,28,28,0.5), rgba(50,50,50,0.6)),  /* Reduced opacity */
+        url("images/dragonflame.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.birthday-card .text {
+    width: 90%;
+    height: 90%;              /* Slightly more height */
+    margin: auto;
+    font-family: 'Cinzel', serif;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/dragonflame.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 8px;             /* Minimal padding */
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Vertically center the text block */
+    align-items: center;       /* Horizontally center if needed */
+    text-align: center;
+}
+
+.birthday-card .text > p {
+    font-size: 0.75em;        /* Small enough to fit content */
+    font-weight: 500;
+    line-height: 1.2rem;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 5px 0;
+    opacity:1;
+}
+
+.birthday-card .text .title {
+    font-size: 1em;           /* Keep title balanced */
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 1px 1px #444444;
+    margin: 8px 0;
+}
+
+
+
+/*.birthday-card .text {
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    font-family: 'Cinzel', serif;
+    padding: 8px;
+}
+
+.birthday-card .text > p {
+    font-size: 0.75em;            /* Reduced font size 
+    font-weight: 400;             /* Lighten font slightly 
+    line-height: 1.2rem;          /* Tighten line spacing 
+    color: #f0f0f0;
+    text-align: justify;          /* Neat paragraph alignment 
+    margin: 10px auto 0 auto;     /* Minimal margins 
+}
+
+.birthday-card .text .title {
+    font-size: 1em;               /* Smaller title 
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 1px 1px #444444;
+    margin: 15px auto 15px auto;  /* Tighter margins 
+}*/
+
+
+
+.birthday-card .cover-outer,
+.birthday-card .cover-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0 0 -10px;
+    border: 10px solid #8a8a8a;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+.birthday-card .cover-outer {
+    backface-visibility: hidden;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.birthday-card .cover-outer img {
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+}
+
+/*.birthday-card .cover-inner {
+    background-color: #2a2a2a;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.birthday-card .cover-inner img {
+    transform: rotateY(170deg);
+}*/
+
+.birthday-card .cover-inner {
+    position: absolute;            /* Ensure it layers properly */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #8a8a8a;    /* Or your current border color */
+    background-color: #2a2a2a;     /* Or your chosen background */
+    overflow: hidden;
+    z-index: 1;                    /* Keep it beneath outer cover */
+}
+
+.birthday-card .cover-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;               /* Remove rotation */
+}
+
+
+
+.birthday-card:hover .cover-outer {
+    transform: perspective(800px) rotateY(-170deg);
+}
+
+.birthday-card:hover .cover-inner {
+    transform: perspective(800px) rotateY(-170deg);
+    box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(255, 255, 255, 0.05);
+}
+
+@media only screen and (max-width: 600px) {
+    .birthday-card {
+        perspective: 1000px;
+    }
+}
+
+.cover-inner {
+    position: relative;
+}
+
+.inner-quote {
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    right: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    color: #ffffff;
+    text-align: center;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    opacity:1;
+
+     transform: rotateY(180deg);
+}
+
+.overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);  /* Adjust opacity here */
+    z-index: 1;
+}
+
+.cover-inner img {
+    transform: rotateY(170deg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-outer .signature-text {
+    position: absolute;
+    bottom: 40px;         /* Lifted higher above the edge */
+    right: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75em;    /* Slightly bigger for clarity */
+    font-weight: 400;     /* Normal weight, clean look */
+    color: #ffffff;       /* Bright silver-white for visibility */
+    opacity: 0.9;         /* More visible */
+    font-style: italic;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);  /* Clear subtle glow for sharpness */
+}
+
