@@ -259,4 +259,23 @@ body {
     font-style: italic;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);  /* Clear subtle glow for sharpness */
 }
+@media (max-width: 600px) {
+    .birthday-card .text {
+        height: 90%;                 /* Give more height */
+        justify-content: center;     /* Vertically center text */
+        padding: 10px 5px;           /* Some breathing space */
+    }
+
+    .birthday-card .text > p {
+        font-size: 0.9em;            /* Smaller readable font */
+        line-height: 1.4rem;
+        margin: 10px auto 0 auto;
+    }
+
+    .birthday-card .text .title {
+        font-size: 1.1em;            /* Slightly smaller title */
+        margin: 10px auto;
+    }
+}
+
 
