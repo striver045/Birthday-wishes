@@ -262,7 +262,7 @@ body {
     font-style: italic;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);  /* Clear subtle glow for sharpness */
 }
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     .birthday-card .text {
         height: 90%;
         padding: 15px 10px;
@@ -280,6 +280,6 @@ body {
     }
 }
 
-}
+}*/
 
 
