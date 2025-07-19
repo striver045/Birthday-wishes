@@ -70,7 +70,7 @@ body {
 
 
 .birthday-card .text {
-    width: 100%;        /* Make it fully stretch horizontally */
+    width: 80%;        /* Make it fully stretch horizontally */
     height: 100%;       /* Full height of the card */
     padding: 10px;      /* Control inner spacing */
     font-family: 'Cinzel', serif;
@@ -80,7 +80,7 @@ body {
     align-items: center;        /* Horizontal center */
     text-align: center;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("dragonflame.jpg");
     background-position: center;
     background-repeat: no-repeat;
