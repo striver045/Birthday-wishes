@@ -71,7 +71,7 @@ body {
 
 .birthday-card .text {
     width: 80%;        /* Make it fully stretch horizontally */
-    height: 100%;       /* Full height of the card */
+    height: 80%;       /* Full height of the card */
     padding: 10px;      /* Control inner spacing */
     font-family: 'Cinzel', serif;
     display: flex;
