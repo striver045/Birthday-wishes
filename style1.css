@@ -73,7 +73,6 @@ body {
     width: 100%;        /* Make it fully stretch horizontally */
     height: 100%;       /* Full height of the card */
     padding: 10px;      /* Control inner spacing */
-    margin: 0;          /* Remove auto margins */
     font-family: 'Cinzel', serif;
     display: flex;
     flex-direction: column;
@@ -89,7 +88,7 @@ body {
     border-radius: 10px;
     box-sizing: border-box;
     margin-top:10%;
-    margin-bottom:10%;
+    margin-bottom:20%;
 }
 
 
