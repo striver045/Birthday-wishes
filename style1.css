@@ -70,10 +70,16 @@ body {
 
 
 .birthday-card .text {
-    width: 80%;
-    height: 80%;              /* Slightly more height */
-    margin: auto;
+    width: 100%;        /* Make it fully stretch horizontally */
+    height: 100%;       /* Full height of the card */
+    padding: 10px;      /* Control inner spacing */
+    margin: 0;          /* Remove auto margins */
     font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Vertical center */
+    align-items: center;        /* Horizontal center */
+    text-align: center;
     background:
         linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("dragonflame.jpg");
@@ -81,15 +87,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    padding: 8px;             /* Minimal padding */
     box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* Vertically center the text block */
-    align-items: center;       /* Horizontally center if needed */
-    text-align: center;
 }
+
 
 .birthday-card .text > p {
     font-size: 0.75em;        /* Small enough to fit content */
